@@ -1,13 +1,13 @@
-(function($) {
+(function ($) {
   "use strict";
 
-  $(window).on("load", function() {
+  $(window).on("load", function () {
     /* Page Loader active
     ========================================================*/
     $("#preloader").fadeOut();
 
     // Sticky Nav
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
       if ($(window).scrollTop() > 200) {
         $(".scrolling-navbar").addClass("top-nav-collapse");
       } else {
@@ -23,13 +23,13 @@
       duplicate: true,
       label: "",
       closedSymbol: '<i class="icon-arrow-right"></i>',
-      openedSymbol: '<i class="icon-arrow-down"></i>'
+      openedSymbol: '<i class="icon-arrow-down"></i>',
     });
 
     /* ==========================================================================
     countdown timer
     ========================================================================== */
-    jQuery("#clock").countdown("2020/07/10-10:00", function(event) {
+    jQuery("#clock").countdown("2021/07/11-10:00", function (event) {
       var $this = jQuery(this).html(
         event.strftime(
           "" +
@@ -45,20 +45,20 @@
     ========================================================*/
     var wow = new WOW({
       //disabled for mobile
-      mobile: false
+      mobile: false,
     });
     wow.init();
 
     // one page navigation
     $(".onepage-nev").onePageNav({
-      currentClass: "active"
+      currentClass: "active",
     });
 
     /* Back Top Link active
     ========================================================*/
     var offset = 200;
     var duration = 500;
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       if ($(this).scrollTop() > offset) {
         $(".back-to-top").fadeIn(400);
       } else {
@@ -66,11 +66,11 @@
       }
     });
 
-    $(".back-to-top").on("click", function(event) {
+    $(".back-to-top").on("click", function (event) {
       event.preventDefault();
       $("html, body").animate(
         {
-          scrollTop: 0
+          scrollTop: 0,
         },
         600
       );
